@@ -1,6 +1,7 @@
 package com.vytrack.step_definitions;
 
 import com.vytrack.pages.LoginPage;
+import com.vytrack.pages.OronicPage;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +14,7 @@ import java.util.Set;
 
 public class OroincStepDefinitions {
 
-  //  OronicPage oronicPage = new OronicPage();
+   OronicPage oronicPage = new OronicPage();
     LoginPage loginPage = new LoginPage();
 
     @Given("User is already in the log in page")
@@ -33,8 +34,10 @@ public class OroincStepDefinitions {
 
     @When("Click the question icon on the right top of the homepage")
     public void click_the_question_icon_on_the_right_top_of_the_homepage() {
-        WebElement questionIcon = Driver.getDriver().findElement(By.xpath("//i[@class='fa-question-circle']"));
-        questionIcon.click();
+      //  WebElement questionIcon = Driver.getDriver().findElement(By.xpath("//i[@class='fa-question-circle']"));
+      //  questionIcon.click();
+        oronicPage.questionIcon.click();
+
     }
 
 
