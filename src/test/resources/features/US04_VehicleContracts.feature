@@ -1,6 +1,6 @@
 @wip
 Feature: Vehicle contracts page accessibility
-  US#4: As a user, I want to access to Vehicle contracts page
+  US04: As a user, I want to access to Vehicle contracts page
   Background: the user is on the login page for all scenarios
     Given the user is on the login page
 
