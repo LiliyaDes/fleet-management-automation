@@ -11,10 +11,10 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
-        features = "src/test/resources/feature",
+        features = "src/test/resources/features",
         glue="com/vytrack/step_definitions",
         dryRun=false,
-        tags="",
+        tags="@wip",
         publish = true
 )
 
