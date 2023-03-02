@@ -1,4 +1,6 @@
+
 package com.vytrack.pages;
+
 
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
@@ -14,7 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class BasePage {
+public abstract class BasePage {
+
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
@@ -95,4 +98,5 @@ public class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
 }
