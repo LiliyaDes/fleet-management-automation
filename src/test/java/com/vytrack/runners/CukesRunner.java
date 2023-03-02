@@ -1,3 +1,4 @@
+
 package com.vytrack.runners;
 
 import io.cucumber.junit.Cucumber;
@@ -11,12 +12,10 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
-        features = "src/test/resources/feature",
-        glue="com/vytrack/step_definitions",
-        dryRun=false,
-        tags="",
-        publish = true
+        features = "src/test/resources/features",
+        glue = "com/vytrack/step_definitions",
+        dryRun = false,
+        tags = "@wip",
+        publish = true //generating a report with public link
 )
-
-public class CukesRunner {
-}
+public class CukesRunner {}
