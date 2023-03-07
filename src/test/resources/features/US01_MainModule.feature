@@ -1,4 +1,4 @@
-@wip
+
 Feature: Accessibility of main modules of the app
   US#01: As a user, I want to access all the main modules
 
