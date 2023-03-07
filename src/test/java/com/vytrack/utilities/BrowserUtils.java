@@ -15,6 +15,12 @@ import java.util.Set;
 
 public class BrowserUtils {
 
+
+    /*
+    This method will accept int (in seconds)
+    and execute Thread.sleep method for given duration
+    Arg: int second
+     */
     public static void sleep(int second){
         second *= 1000;
         try{
@@ -44,8 +50,9 @@ public class BrowserUtils {
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
 
-    public static void verifyTitle(String expectedTitle){
+    public static void  verifyTitle(String expectedTitle){
         Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
+
     }
     public static void verifyTitleContains( String expectedInTitle){
         Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedInTitle));
@@ -477,5 +484,13 @@ public class BrowserUtils {
     public static void waitForPresenceOfElement(By by, long time) {
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time)).until(ExpectedConditions.presenceOfElementLocated(by));
     }
+
+
+
+
+
+
+
+
 
 }
