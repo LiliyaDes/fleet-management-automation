@@ -1,3 +1,4 @@
+
 package com.vytrack.runners;
 
 import io.cucumber.junit.Cucumber;
@@ -17,7 +18,6 @@ import org.junit.runner.RunWith;
         dryRun=false,
         tags="@WIP",
         publish = true
-)
 
-public class CukesRunner {
-}
+)
+public class CukesRunner {}

@@ -1,4 +1,6 @@
+
 package com.vytrack.pages;
+
 
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public abstract class BasePage {
 
-    @FindBy(xpath = "//li[@class='dropdown dropdown-level-1']")
+    @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
     @FindBy(css = "div[class='loader-mask shown']")
@@ -96,4 +98,5 @@ public abstract class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
 }
