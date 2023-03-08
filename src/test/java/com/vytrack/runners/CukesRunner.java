@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
+                "json:target/cucumber.json",
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
@@ -16,7 +17,7 @@ import org.junit.runner.RunWith;
 
         glue="com/vytrack/step_definitions",
         dryRun=false,
-        tags="@wip",
+        tags="@B28G21-108",
         publish = true
 
 )
