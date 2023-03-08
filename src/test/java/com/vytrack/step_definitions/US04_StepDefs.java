@@ -1,7 +1,6 @@
 package com.vytrack.step_definitions;
 
-import com.vytrack.pages.VehicleContractsPage_Liliya;
-import com.vytrack.utilities.BrowserUtils;
+import com.vytrack.pages.HomePage_Liliya;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -11,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class US04_StepDefs {
 
-    VehicleContractsPage_Liliya vehicleContractsPage = new VehicleContractsPage_Liliya();
+    HomePage_Liliya vehicleContractsPage = new HomePage_Liliya();
 
     @When("Click the Vehicle contracts under the Fleet")
     public void click_the_vehicle_contracts_under_the_fleet() {

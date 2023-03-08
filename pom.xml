@@ -72,6 +72,12 @@
             <version>7.3.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>cucumber-json-report-data-generator</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
     </dependencies>
 
 </project>
