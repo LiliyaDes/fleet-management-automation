@@ -1,5 +1,7 @@
 package com.vytrack.step_definitions;
 
+
+
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
@@ -11,27 +13,45 @@ import org.openqa.selenium.TakesScreenshot;
 
 import java.time.Duration;
 
+/*
+In this class we will be able to create "pre" and "post" condition
+for ALL the SCENARIOS and even STEPS.
+ */
 public class Hooks {
 
-    @Before(order = 1)
-    public void setUp(){
-        System.out.println("Running before each scenario");
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    //import the @Before coming from io.cucumber.java
+    @Before (order = 1)
+    public void setupMethod(){
 
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 
+    //@Before (value = "@login", order = 2 )
+    public void login_scenario_before(){
+        System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
+    }
+
+    /*
+    @After will be executed automatically after EVERY scenario in the project.
+     */
     @After
-    public void tearDown(Scenario scenario){
-        if(scenario.isFailed()){
+    public void teardownMethod(Scenario scenario){
+
+        if (scenario.isFailed()) {
+
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot,"image/png",scenario.getName());
+            scenario.attach(screenshot, "image/png", scenario.getName());
+
         }
-        System.out.println("Running after each scenario");
+
+
+
         BrowserUtils.sleep(2);
         Driver.closeDriver();
 
     }
+
     //@BeforeStep
     public void setupStep(){
         System.out.println("-----> @BeforeSTEP : Running before each step!");
@@ -41,5 +61,6 @@ public class Hooks {
     public void teardownStep(){
         System.out.println("-----> @AfterSTEP : Running after each step!");
     }
+
 
 }

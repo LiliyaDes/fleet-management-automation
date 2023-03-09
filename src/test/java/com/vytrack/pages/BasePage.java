@@ -1,4 +1,6 @@
+
 package com.vytrack.pages;
+
 
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
@@ -15,6 +17,7 @@ import java.time.Duration;
 import java.util.List;
 
 public abstract class BasePage {
+
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
@@ -95,4 +98,5 @@ public abstract class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
 }
