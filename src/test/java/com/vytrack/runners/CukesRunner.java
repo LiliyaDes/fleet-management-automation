@@ -16,8 +16,11 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue="com/vytrack/step_definitions",
         dryRun=false,
-        tags="@B28G21-108",
+
+        tags="@Mila1",
         publish = true
 
-)
-public class CukesRunner {}
+
+public class CukesRunner {
+}
+//@B28G21-121 this is for jira connection
